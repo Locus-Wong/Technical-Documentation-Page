@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+      /* min-width: 290px; */
+      color: #333;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+  }  
+  
+  #main-doc {
+    /* positioned relative to the initial containing block, which is usually the <html> element. */
+    position: absolute;
+    left: 310px;
+    padding: 30px 20px;
+    margin-bottom: 110px;
+  }
+    
+  header {
+    color: black;
+    /* 使header 與頁頂有一段距離 */
+    margin: 10px;
+    /* 使header水平置中 */
+    text-align: center;
+    /* 使font-size 1.8倍 of nearest parent element or element itself */
+    font-size: 1.8em;
+  }
+  
+  #main-doc header {
+    text-align: left;
+    margin: 0px;
+  }
+  
+  .sub-header{
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  #navbar {
+    /* The position: fixed; CSS property is used to position an element relative to the viewport (the browser window) rather than relative to its containing element. When an element has position: fixed;, it will be removed from the normal document flow, and its position will be fixed at a specified location on the screen, regardless of scrolling. */
+    position: fixed;
+    width: 300px;
+    /* Set 位置為最左上 */
+    top: 0px;
+    left: 0px;
+    /* 獨佔左面整個部分 */ 
+    /* OR height: 100vh; */
+    height: 100%;
+    /* 增設一條vertical 分界線 */
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+  }
+  
+  #navbar a {
+    display: block;
+    /* 使index title文字 與四邊有一段距離 */
+    padding: 10px 30px;
+    color: #333;
+    /* 刪除底線 */
+    text-decoration: none;
+    /* 使鼠標當拍向變成pointer */
+    cursor: pointer;
+  }
+  
+  #navbar ul {
+    /* 清除瀏覽器預設的padding-inline-start (40px) */
+    padding: 0;
+    /* 將overflow hidden */
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  #navbar li {
+    color: #333;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  section{
+    margin: 0px 0px 50px 0px;
+  }
+  
+  section li {
+    margin: 15px 0px 0px 20px;
+  }
+  
+  section article {
+    color: #333;
+    margin: 15px;
+  }
+  
+  p{
+    line-height: 40px;
+  }
+  
+  table{
+    max-width: 900px;
+    min-width: 800px;
+    line-height: 2rem;
+  }
+  
+  table td{
+    padding: 2px 10px;
+  }
+  
+  figcaption{
+    color: #4d4e53;
+  }
+  
+  code {
+    display: block;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 18px;
+    margin: 10px 0px;
+    border-radius: 5px;
+  }
+    
+    @media only screen and (max-width: 800px){
+      #navbar {
+        position: relative;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        width:100vw;
+        height: 358px;
+        border: none;
+        z-index: 1;
+      }
+  
+      #navbar ul {
+        border-right: 1px solid;
+        border-left: 1px solid;
+        height: 271px;
+        width: 100%;
+      }
+  
+      #main-doc {
+        position: absolute;
+        top:50px;
+        left:0px;
+        padding: 0px 10px;
+      }
+  
+      table{
+        max-width: 700px;
+        min-width: 700px;
+      }
+    }
+    
+  
+  
